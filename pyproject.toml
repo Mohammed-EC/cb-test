@@ -7,7 +7,6 @@ classifiers = ["Programming Language :: Python :: 3 :: Only"]
 
 [tool.poetry.dependencies]
 python = "^3.7.1"
-pipelinewise-singer-python = "2.0.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "7.1.3"
