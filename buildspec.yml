@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.10
+    commands:
+      - curl -sSL https://install.python-poetry.org | python3 -
+      - export PATH="/root/.local/bin:$PATH"
+      - poetry --version
+      - poetry install
+
+  build:
+    commands:
+      - poetry run pytest --cov-report=term-missing --junitxml=/tmp/pytest.xml --cov=. . | tee /tmp/pytest-coverage.txt
+reports:
+  pytest_reports:
+    files:
+      - '/tmp/pytest.xml'
+    file-format: 'JUNITXML'
