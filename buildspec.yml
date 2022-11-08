@@ -12,9 +12,9 @@ phases:
 
   build:
     commands:
-      - poetry run pytest --cov-report=term-missing --junitxml=/tmp/pytest.xml --cov=. . | tee /tmp/pytest-coverage.txt
+      - poetry run pytest --cov-report=term-missing --junitxml=./pytest.xml --cov=. . | tee ./pytest-coverage.txt
 reports:
   pytest_reports:
     files:
-      - '/tmp/pytest.xml'
+      - './pytest.xml'
     file-format: 'JUNITXML'
