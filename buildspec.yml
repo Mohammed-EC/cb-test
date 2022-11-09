@@ -12,7 +12,7 @@ phases:
 
   build:
     commands:
-      - poetry run pytest --cov-report=term-missing --junitxml=./pytest.xml --cov=. . | tee ./pytest-coverage.txt  
+      - poetry run pytest
 reports:
   pytest_reports:
     files:
