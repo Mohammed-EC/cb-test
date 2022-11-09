@@ -8,7 +8,7 @@ def subtract(x, y):
 
 def test_add():
     result = add(1, 2)
-    assert result == 3
+    assert result == 4
 
 
 def test_subtract():
